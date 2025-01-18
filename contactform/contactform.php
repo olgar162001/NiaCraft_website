@@ -26,13 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'olgar162001@gmail.com'; // Your Gmail
-        $mail->Password = 'doiq usgq zwgw vpni';    // Replace with App Password
+        $mail->Username = 'niacraftsolutions@gmail.com'; // Your Gmail
+        $mail->Password = 'ypal niea lohk vgot';    // Replace with App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('olgar162001@gmail.com', 'NiaCraft Contact');
-        $mail->addAddress('olgar162001@gmail.com'); // Recipient email
+        $mail->setFrom('niacraftsolutions@gmail.com', 'NiaCraft Contact');
+        $mail->addAddress('niacraftsolutions@gmail.com'); // Recipient email
 
         $mail->Subject = $subject;
         $mail->Body = "Name: $name\nEmail: $email\n\nMessage:\n" . nl2br($message);
