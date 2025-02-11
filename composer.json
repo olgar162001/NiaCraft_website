@@ -1,0 +1,14 @@
+{
+    "name": "dell/nia-craft",
+    "type": "project",
+    "authors": [
+        {
+            "name": "olgar162001",
+            "email": "olgar162001@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
