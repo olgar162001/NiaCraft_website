@@ -4,6 +4,9 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
+// echo fsockopen("mail.niacraftsolutions.com", 465, $errno, $errstr, 10);
+// die();
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -24,19 +27,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'mail.niacraftsolutions.com';
+        $mail->Host = 'niacraftsolutions.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'info@niacraftsolutions.com';
         $mail->Password = 'O4g$45XVYC&Z';    
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
+        
 
-        $mail->setFrom($email, $name);
+        $mail->setFrom('info@niacraftsolutions.com', 'Niacraft Solutions');
         $mail->addAddress('info@niacraftsolutions.com', 'Niacraft Solutions');
 
         $mail->Subject = $subject;
         $mail->isHTML(true);
-    
+
         // Email body with inline styling
         $mail->Body = "
         <!DOCTYPE html>
@@ -106,8 +110,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     } catch (Exception $e) {
         http_response_code(500);
-        echo "Oops! Something went wrong. Error: {$mail->ErrorInfo}";
+        
+        // Display error in JavaScript alert
+        echo "<script>alert('Error: " . addslashes($e->getMessage()) . "');</script>";
+        
+        // Show detailed error output
+        echo "Oops! Something went wrong. Error: " . $mail->ErrorInfo;
+    
+        die(); // Stop script execution
     }
+    
 
 } else {
     http_response_code(403);
