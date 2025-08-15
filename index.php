@@ -52,7 +52,7 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!--<h1 class="text-light"><a href="#intro" class="scrollto"><span >NiaCraft</span></a></h1>-->
         <a href="#header" class="scrollto">
-          <img src="img/Logo.png" alt="NiaCraft Logo" class="img-fluid" width="160">
+          <img src="img/Logo.png" alt="NiaCraft Logo" class="img-fluid" width="100">
         </a>
       </div>
 
@@ -77,9 +77,9 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last">
-          <h2>Helping Business<br>Grow With Purposeful <span class="text-success">Tech Solution!</span></h2>
+          <h2>Helping Business<br>Grow With Purposeful <span class="" style="color:#1176AF;">Tech Solution!</span></h2>
           <div>
-            <a href="#about" class="btn-get-started scrollto bg-success">Get Started</a>
+            <a href="#about" class="btn-get-started scrollto" style="background: #34E89E;">Get Started</a>
           </div>
         </div>
   
@@ -861,7 +861,8 @@
               <div class="col-sm-6">
   
                 <div class="footer-info">
-                  <h3>NiaCraft Solutions</h3>
+                  <!-- <h3>NiaCraft Solutions</h3> -->
+                  <img src="img/Logo.png" alt="Niacraft Solution Logo" width="200" class="pb-3">
                   <p>
                     NiaCraft Solutions is dedicated to providing innovative IT solutions, including web development, graphic design, social media management, and IT support. We aim to empower businesses with quality and affordable digital services.
                   </p>
@@ -895,8 +896,8 @@
                   <h4>Contact Us</h4>
                   <p>
                     Dar es Salaam, Tanzania<br>
-                    <a href="tel:+255623508047"><strong>Phone:</strong> +255 623 508 047</a><br>
-                    <a href="mailto:info@niacraftsolutions.com"><strong>Email:</strong> info@niacraftsolutions.com</a><br>
+                    <a href="tel:+255623508047" style="color: #1176AF;"><strong>Phone:</strong> +255 623 508 047</a><br>
+                    <a href="mailto:info@niacraftsolutions.com" style="color: #1176AF;"><strong>Email:</strong> info@niacraftsolutions.com</a><br>
                   </p>
                 </div>
   
@@ -955,7 +956,7 @@
         &copy; Copyright <strong>NiaCraft Solutions</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="#">NiaCraft Solutions</a>
+        Made with ❤️ by <a href="#">NiaCraft Solutions</a>
       </div>
     </div>
   </footer>
